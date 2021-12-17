@@ -1,0 +1,157 @@
+:root {
+    --cor2: #FBE7C6;
+    --cor3: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Elementos base*/
+body {
+    background: #141414;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFF;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    color: #FBE7C6;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #FFFF;
+}
+
+/*Filme principal*/
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('./Owl/os-animais-mais-fofos.jpg');
+    height: 600px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .titulo {
+    font-size: 40px;
+    margin-top: 30%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.filme-principal .botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: #FFFF;
+    padding: 15px 30px;
+    margin-right: 40px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.filme-principal .botao:hover{
+    background-color: #FFFF;
+    color: #141414;
+}
+
+.filme-principal .botao i{
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+/*Carrosel*/
+.box-filme {
+    height: 90%;
+    width: 90%;
+    display: block;
+}
+
+.carrosel-filmes {
+    margin-top: 5px;
+}
+
+.carrosel-filmes .sugestoes{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.carrosel-filmes .item {
+    width: 95%;
+}
+
+/*Rodapé*/
+
+.containerrodape {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+
+/*Responsividade*/
+
+@media screen and (max-width: 700px) {
+    header .container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .botao {
+        margin-top: 5px;
+        width: 300px;
+    }
+
+    .filme-principal .titulo{
+        font-size: 18px;
+    }
+
+    .filme-principal{
+        font-size: 14px;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .descricao {
+        width: 50%;
+    }
+}
